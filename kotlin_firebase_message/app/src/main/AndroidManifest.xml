@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="VLTH_SMARTAPP"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kotlin_firebase"
+        tools:targetApi="31">
+        <activity
+            android:name="com.example.kotlin_firebase.menu.BillActivity"
+            android:exported="false"
+            android:parentActivityName=".messages.LatestMessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
+        </activity>
+        <activity
+            android:name="com.example.kotlin_firebase.menu.FoodActivity"
+            android:exported="false"
+            android:parentActivityName=".messages.LatestMessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
+        </activity>
+
+
+        <activity
+            android:name="com.example.kotlin_firebase.messages.ChatlogActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
+        </activity>
+        <activity
+            android:name=".messages.LatestMessagesActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kotlin_firebase.registerandlogin.RegisterActivity"
+            android:exported="false" />
+        <activity android:name="com.example.kotlin_firebase.registerandlogin.LoginActivity" />
+        <activity
+            android:name="com.example.kotlin_firebase.messages.NewMessageActivity"
+            android:parentActivityName=".messages.LatestMessagesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
+        </activity>
+    </application>
+
+</manifest>

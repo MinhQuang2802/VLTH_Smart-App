@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/menu_food"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.FoodActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout_search_food"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:orientation="horizontal"-->
+
+<!--        app:layout_constraintBottom_toTopOf="@+id/srcollview_activity_food"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.238"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editext_search_food"-->
+<!--            android:layout_width="319dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/rounded_edittext_register_login"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Search Food"-->
+<!--            android:inputType="text"-->
+<!--            android:minHeight="48dp"-->
+<!--            tools:ignore="MissingConstraints" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/search_button"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+
+<!--            android:src="@android:drawable/ic_menu_search"-->
+<!--            tools:ignore="MissingConstraints" />-->
+<!--    </LinearLayout>-->
+
+    <ScrollView
+        android:id="@+id/srcollview_activity_food"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView3"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <android.support.v7.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerview_food"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layoutManager="android.support.v7.widget.LinearLayoutManager"-->
+<!--                tools:ignore="MissingConstraints" />-->
+<!--        </LinearLayout>-->
+
+
+<!--    </ScrollView>-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_nav"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
+</android.support.constraint.ConstraintLayout>

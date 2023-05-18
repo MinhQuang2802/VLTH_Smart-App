@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/food_row_recyclerview">
+
+    <ImageView
+        android:id="@+id/food_image"
+        android:layout_width="164dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/minus_button"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/plus_button"
+        android:layout_width="48dp"
+
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/count_food"
+        app:layout_constraintTop_toTopOf="@+id/food_name"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/minus_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_name"
+        app:srcCompat="@drawable/ic_baseline_remove_24"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/count_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plus_button"
+        app:layout_constraintStart_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toBottomOf="@+id/food_name"
+        app:layout_constraintVertical_bias="0.797"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="197dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="91dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="price"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/plus_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_name"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
